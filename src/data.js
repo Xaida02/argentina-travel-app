@@ -1,0 +1,95 @@
+// Some of the area key values in each object could be wrong, they are there just to serve as an id when I map the array in react.
+
+const provinces = [
+  {
+    name: "Buenos Aires",
+    img: "https://img.freepik.com/fotos-premium/colores-brillantes-caminito-barrio-boca-buenos-aires_328046-11197.jpg?w=2000",
+    population: 15625084,
+    area: 308,
+    climate: "Humid subtropical",
+    food: "Asado, provoleta, matambre, lomito, choripan",
+    localMusic: "Tango, Folklore, Rock",
+    mainAttractions: "La Boca, Palermo, Recoleta",
+    phrase: "The Heart of Argentina Beats in Buenos Aires",
+    desc: "Buenos Aires is the bustling capital of Argentina, known for its rich cultural heritage, vibrant nightlife, and historic architecture. The city is home to many iconic landmarks such as the Obelisk and the Teatro Colon, as well as trendy neighborhoods like Palermo and Recoleta. Visitors can also enjoy traditional Argentine cuisine, such as empanadas and asado, and experience the passion of the tango dance.",
+  },
+  {
+    name: "Formosa",
+    img: "https://volemos.nyc3.cdn.digitaloceanspaces.com/blog/wp-content/uploads/2020/11/18115121/formosa-argentina.jpg",
+    population: 552190,
+    area: 95833,
+    climate: "Semi-arid",
+    food: "Empanadas, asado, mandioca stew, tajá(crocodrile BBQ)",
+    localMusic: "Carnavalito, el huayno, la cueca",
+    mainAttractions:
+      "Formosa's National Park, The Pilcomayo River, The Paraná Delta",
+    phrase: "Nature's Haven in Formosa",
+    desc: "Formosa is a province in northern Argentina known for its natural beauty and rich biodiversity. It's home to the Formosa's National Park, which offers a variety of outdoor activities such as hiking and wildlife watching. The Pilcomayo River and the Paraná Delta are also popular attractions, offering opportunities for fishing and boating. Formosa's semi-arid climate and traditional Argentine cuisine, such as empanadas and asado, make it a unique destination for visitors.",
+  },
+  {
+    name: "Córdoba",
+    img: "https://c0.wallpaperflare.com/preview/631/387/741/argentina-la-cumbrecita-sky-clouds.jpg",
+    population: 3567654,
+    area: 576,
+    climate: "Semiarid ",
+    food: "Empanadas, asado, churrasco, locro",
+    localMusic: "Folklore, Cuarteto, Cumbia",
+    mainAttractions:
+      "The Sierras de Córdoba, The Jesuitic Block, The Historical Center",
+    phrase: "From the picturesque Sierras of Córdoba, our province invites you",
+    desc: "The province of Córdoba is located in the center of Argentina and is known for its rich cultural heritage and picturesque landscapes. The Sierras de Córdoba are a must-see attraction, offering some awesome afternoon picnic opportunities. The Jesuitic Block and the Historical Center are also popular, showcasing the province's history and strong spanish heritage. Córdoba's humid subtropical climate and traditional Argentine cuisine make it a great destination for visitors.",
+  },
+  {
+    name: "Misiones",
+    img: "https://c4.wallpaperflare.com/wallpaper/178/834/398/waterfall-landscape-water-nature-wallpaper-preview.jpg",
+    population: 1128201,
+    area: 99079,
+    climate: "Humid subtropical",
+    food: "Asado, locro, dulce de leche, chipa",
+    localMusic: "Chamamé, la guarania, el purajhei",
+    mainAttractions: "Iguazu falls, Yerba mate",
+    phrase:
+      "From the stunning Iguazu Falls of Misiones, where Nature and Culture Meet",
+    desc: "Known for its lush subtropical forests and cascading waterfalls, the province of Misiones is a nature lover's paradise. The Iguazu National Park, home to the famous Iguazu Falls, is a must-see attraction. Visitors can also explore the local culture and history through traditional crafts and indigenous communities.",
+  },
+  {
+    name: "Tierra del fuego",
+    img: "https://rare-gallery.com/resol/1600x900/966687-ushuaia-Patagonia-nature-city.jpg",
+    population: 367448,
+    area: 102307,
+    climate: "Subantarctic",
+    food: "Lamb, fish, patagonian clam, seafood, spider crab stew",
+    localMusic: "loncomeo, la cordillerana, el chorrillero",
+    mainAttractions: "The Tierra del Fuego National Park, The Ushuaia Bay",
+    desc: "Ushuaia is the southernmost city in the world and the capital of the Argentine province of Tierra del Fuego. It's surrounded by stunning natural beauty and offers a variety of outdoor activities such as hiking, skiing, and fishing. The Tierra del Fuego National Park and the Ushuaia Bay are must-see attractions. The city also offers a unique blend of culture, history and adventure.",
+    phrase: "The End of the World, The Beginning of Adventure",
+  },
+  {
+    name: "Salta",
+    img: "https://c1.wallpaperflare.com/preview/79/779/771/argentina-salta-hills-nature-arid.jpg",
+    population: 577466,
+    area: 224686,
+    climate: "Semi-arid",
+    food: "Empanadas, asado, humita, tamal",
+    localMusic: "Zambas, chacarera, carnavalito",
+    mainAttractions: "The Hill of Seven Colors, The Inca Baths, The Cathedral",
+    phrase:
+      "From the majestic Andes of Salta, A Province of Color and Contrast",
+    desc: "The province of Salta is rich in history and culture, with a colorful blend of indigenous and Spanish influences. The charming colonial city of Salta, the provincial capital, is known for its well-preserved architecture and lively cultural scene. Visitors can explore the area's rich history through its many museums and historical sites, or take a scenic train ride through the stunning Andean landscapes.",
+  },
+  {
+    name: "Mendoza",
+    img: "https://wallpaperaccess.com/full/4082324.jpg",
+    population: 3567654,
+    area: 165361,
+    climate: "Semi-arid",
+    food: "Wine, asado, locro, corn stew",
+    localMusic: "La tonada, la cueca, el gato, Rock",
+    mainAttractions: "Wine tasting, Aconcagua",
+    phrase:
+      "From the rolling hills of Mendoza, A Province of Vineyards and Splendor",
+    desc: "Known for its world-renowned wines, the province of Mendoza is the heart of Argentina's wine country. Visitors can explore the picturesque vineyards and wineries, and taste the region's delicious wines. The Andes Mountains provide a stunning backdrop to the region, offering opportunities for hiking and outdoor activities. The city of Mendoza, the provincial capital, is also known for its lively nightlife and delicious local cuisine.",
+  },
+];
+
+export default provinces;

@@ -1,0 +1,281 @@
+.slider {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50px;
+  width: 700px;
+  height: 500px;
+  flex-direction: column;
+  border-radius: 5%;
+  transition: all 0.6s linear;
+  opacity: 0;
+}
+
+.provinces-heading {
+  letter-spacing: 3px;
+  color: aliceblue;
+  text-transform: capitalize;
+  position: relative;
+  pointer-events: none;
+  pointer-events: none;
+  top: -105px;
+}
+
+.quote-icon {
+  fill: var(--light-blue-a);
+  padding: 30px;
+  font-size: 1.3rem;
+}
+
+.provinces-heading:after {
+  content: "";
+  pointer-events: none;
+  display: block;
+  margin: 5px;
+  padding: 3px;
+  background-color: var(--light-blue-1);
+}
+
+.slider-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 13vh;
+  height: 20%;
+  text-align: center;
+  transform: scale(1.18);
+}
+
+.tour {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  transition: all 0.5s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70vh;
+  line-height: 15px;
+}
+
+.tour h2 {
+  font-size: 1.5rem;
+  border: 2px solid var(--light-blue-a); /* add a border */
+  text-align: center;
+  width: 30%;
+  border-radius: 5px;
+  /* height: 50%; */
+  color: var(--light-blue-a); /* text color */
+  display: inline-block;
+  padding: 12px 20px;
+  letter-spacing: 4px;
+  font-family: "Lato", "Open Sans", sans-serif;
+  transition: all 0.2s ease;
+  font-weight: 300;
+}
+
+.tour h2:hover {
+  background-color: var(--light-blue-a);
+  border: 2px solid transparent; /* add a border */
+  color: var(--light-blue-1);
+}
+
+.img-container:hover .tour {
+  opacity: 1;
+  visibility: visible;
+}
+
+.img-container::before {
+  content: "";
+  position: absolute;
+  transition: all 0.6s ease;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    1,
+    2,
+    2,
+    0.452
+  ); /* adjust the value to change the darkness */
+  pointer-events: none; /* prevent the overlay from interfering with the elements inside */
+}
+
+.img-container:hover::before {
+  opacity: 1;
+}
+
+.lastSlide {
+  pointer-events: none;
+  z-index: -1;
+  transform: translateX(-100%);
+  filter: blur(3px);
+}
+
+.nextSlide {
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(3px);
+  transform: translateX(10%);
+}
+
+.activeSlide {
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+.province-img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.img-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  border-radius: 5px;
+}
+
+.lastSlide .img-container,
+.nextSlide .img-container {
+  transform: scale(0.5);
+}
+
+@media screen and (min-width: 450px) and (max-width: 840px) {
+  .slider {
+    top: 80%;
+    width: 80vh;
+    height: 65vh;
+  }
+  .provinces-heading {
+    top: -20px;
+  }
+  .tour {
+    top: 70%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .slider {
+    top: 80%;
+    width: 70%;
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .slider {
+    top: 70%;
+    width: 70vh;
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slider {
+    top: -80px;
+    width: 40vh;
+    text-align: center;
+    height: 40vh;
+  }
+  .provinces-heading {
+    top: -20%;
+  }
+  .tour {
+    top: 50%;
+    transform: scale(0.5);
+  }
+  .tour h2 {
+    width: 80%;
+  }
+  .quote-icon {
+    padding: 5px;
+    transform: scale(0.8);
+  }
+  .text {
+    font-size: 0.6rem;
+    width: 40vh;
+  }
+}
+
+/* @media screen and (max-width: 400px) {
+  .slider {
+    width: 40vh;
+  }
+  .tour {
+    top: 70%;
+    transform: scale(0.5);
+  }
+
+  .tour h2 {
+    width: 70%;
+  }
+} */
+
+@media screen and (max-width: 500px) and (min-height: 650px) {
+  .tour {
+    transform: scale(0.5);
+  }
+
+  .tour h2 {
+    width: 80%;
+  }
+
+  .provinces-heading {
+    top: -20px;
+  }
+  .img-container {
+    margin: 0px;
+    width: 40vh;
+    height: 25vh;
+  }
+
+  .slider-footer {
+    width: 100%;
+    top: 7vh;
+  }
+
+  .quote-icon {
+    padding: 5px;
+    transform: scale(0.8);
+  }
+
+  .text {
+    width: 80%;
+    font-size: 0.7rem;
+    top: -20px;
+  }
+}
+
+@media screen and (max-height: 500px) and (min-width: 800px) {
+  .slider {
+    top: 130%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .slider {
+    width: 60vh;
+    height: 40vh;
+  }
+}
