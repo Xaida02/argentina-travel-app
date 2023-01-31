@@ -8,7 +8,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  background-color: var(--light-blue-a);
+  background-color: pink;
   box-shadow: -1px 14px 40px 2px hsla(0, 0%, 0%, 0.75);
   color: var(--light-blue-text);
   /* overflow: hidden !important; */
