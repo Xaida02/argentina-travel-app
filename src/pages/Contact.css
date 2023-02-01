@@ -19,6 +19,21 @@
   text-align: center;
   text-shadow: 2px 2px 10px lightblue, -2px -2px 10px #24c882;
   font-size: 2.42rem;
+  color: #298df1; /* Change text color */
+  font-weight: bold; /* Bold text */
+  margin-top: 50px; /* Add margin to top */
+  animation: fadeIn 2s ease-in-out forwards; /* Add animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with 0 opacity */
+    transform: translateY(-20px); /* Move text up */
+  }
+  to {
+    opacity: 1; /* End with full opacity */
+    transform: translateY(0); /* Move text back to original position */
+  }
 }
 
 .contact-headings {
@@ -129,7 +144,6 @@ label {
   position: fixed;
   bottom: 10%;
   right: -20%;
-  background-color: #24c882;
   opacity: 0;
   color: whitesmoke;
   width: 150px;
@@ -145,6 +159,14 @@ label {
 .show-sent {
   opacity: 1;
   right: 5%;
+}
+
+.true {
+  background-color: #24c882;
+}
+
+.false {
+  background-color: #f65539;
 }
 
 .email-sent svg {

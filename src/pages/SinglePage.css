@@ -43,7 +43,7 @@
   text-align: center;
   color: var(--light-blue-a);
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 7.3px;
   text-shadow: 2px 2px 10px var(--light-blue-0),
@@ -55,7 +55,7 @@
   padding: 10px;
   text-align: center;
   color: var(--light-blue-a);
-  border: 4px solid var(--light-blue-a);
+  font-style: italic;
 }
 
 .dark-img {
@@ -84,47 +84,26 @@
 
 .reserve {
   letter-spacing: 3.5px;
-  padding: 1.5vh;
+  padding: 1.8vh;
   font-size: 1rem;
+  background-color: var(--light-blue-0);
   transition: all 0.5s;
-  font-weight: 300;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
   position: relative;
   cursor: pointer;
   color: whitesmoke;
+  transition: var(--transition);
 }
 
-.reserve::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
+.reserve:hover {
+  color: white;
+
+  background-color: var(--light-blue-3);
+  transform: scale(1.12);
 }
-.reserve:hover::before {
-  opacity: 0;
-  transform: scale(0.5, 0.5);
-}
-.reserve::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  transition: all 0.3s;
-  border: 2px solid rgba(173, 216, 230, 0.5);
-  transform: scale(1.2, 1.2);
-}
-.reserve:hover::after {
-  opacity: 1;
-  transform: scale(1, 1);
-}
+
 .province-data::before {
   content: "• ";
   color: var(--light-blue-0);

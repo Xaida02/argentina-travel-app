@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import { social } from "./socials";
 import Loading from "../components/Loading";
 import emailjs from "emailjs-com";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaTimes } from "react-icons/fa";
 
 import "./Contact.css";
 
 const Contact = () => {
   const [localLoading, setLocalLoading] = useState(true);
 
-  const [showSent, setShowSent] = useState(false);
+  const [showSent, setShowSent] = useState({ color: null, sent: false });
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setShowSent(false);
+      setShowSent({ color: null, sent: false });
     }, 3500);
     // timeout();
     return () => clearTimeout(timeout);
@@ -29,20 +29,32 @@ const Contact = () => {
     e.preventDefault();
     const publicKey = "0xsDJAcTBLI7IHp3B";
 
-    emailjs
-      .sendForm("service_1boh3vt", "template_v9x1vfc", e.target, publicKey)
-      .then((res) => {
-        console.log(res);
-        setShowSent(true);
-      })
-      .catch((err) => console.log(err));
+    const inputs = e.target.elements;
+
+    console.log(inputs);
+
+    if (!inputs[0].value || !inputs[1].value || !inputs[2].value) {
+      setShowSent({ sent: true, color: false });
+    } else {
+      emailjs
+        .sendForm("service_1boh3vt", "template_v9x1vfc", e.target, publicKey)
+        .then((res) => {
+          console.log(res);
+          setShowSent({ sent: true, color: true });
+        })
+        .catch((err) => console.log(err));
+    }
   };
+
+  if (localLoading) {
+    return <Loading />;
+  }
 
   return (
     <section className="contact-section">
       <div className="contact-headings">
         <h1 className="tobias">Xaida02</h1>
-        <p className="email">soytobiprogamer@gmail.com</p>
+        <p className="email">tejada.v.tobias@gmail.com</p>
       </div>
       <div className="text-container">
         <p className="text-contact">
@@ -79,8 +91,22 @@ const Contact = () => {
           </a>
         ))}
       </div>
-      <div className={"email-sent" + `${showSent ? " show-sent" : ""}`}>
-        <FaCheck /> Email sent
+      <div
+        className={
+          "email-sent" +
+          `${showSent.sent ? " show-sent " + showSent.color : ""}`
+        }
+      >
+        {showSent.color && (
+          <>
+            <FaCheck /> Email sent
+          </>
+        )}
+        {!showSent.color && (
+          <>
+            <FaTimes /> Sent failed
+          </>
+        )}
       </div>
     </section>
   );

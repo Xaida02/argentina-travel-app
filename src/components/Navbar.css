@@ -138,11 +138,6 @@ nav {
   fill: var(--light-blue-text);
 }
 
-.toggle-btn:hover {
-  background-color: var(--light-blue-0);
-  transform: rotate(90deg);
-}
-
 @media screen and (max-width: 550px) {
   .logo-heading {
     transform: scale(0.8);

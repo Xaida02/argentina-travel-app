@@ -27,6 +27,10 @@ const Navbar = () => {
           </Link>
           <button
             onClick={() => setShowLinks(!showLinks)}
+            style={{
+              transform: showLinks ? "rotate(90deg)" : "rotate(0deg)",
+              background: showLinks ? "#43a1d5" : "",
+            }}
             className="toggle-btn"
           >
             <FaAlignJustify className="toggle" />
