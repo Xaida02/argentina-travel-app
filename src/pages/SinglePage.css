@@ -55,7 +55,7 @@
   text-align: center;
   text-transform: capitalize;
   color: var(--light-blue-a);
-  font-style: italic;
+  font-style: oblique;
 }
 
 .dark-img {
@@ -75,7 +75,7 @@
 }
 
 .province-data span {
-  color: rgba(0, 0, 0, 0.564);
+  color: rgba(0, 0, 0, 0.812);
 }
 
 .province-p {
