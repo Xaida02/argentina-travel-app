@@ -81,7 +81,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 60px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
   margin: 50px;
   background-color: var(--light-blue-a);
@@ -103,7 +103,8 @@ form {
 }
 
 label {
-  color: var(--light-blue-1);
+  color: var(--light-blue-0);
+  font-weight: bold;
 }
 
 .e-input {
@@ -145,6 +146,7 @@ label {
   bottom: 10%;
   right: -20%;
   opacity: 0;
+  cursor: pointer;
   color: whitesmoke;
   width: 150px;
   height: 50px;
@@ -188,6 +190,10 @@ textarea {
 
   .contact-headings {
     padding-bottom: 5vh;
+  }
+
+  .conctact-email-container {
+    padding: 20px;
   }
 
   .text-contact {

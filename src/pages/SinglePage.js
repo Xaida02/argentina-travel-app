@@ -56,17 +56,61 @@ const SinglePage = () => {
         <div className="text-img">
           <h1 className="single-name">{name}</h1>
           <button onClick={() => setShowModal(true)} className="reserve">
-            Reserve Tour!
+            reserve tour
           </button>
           <p className="single-phrase">"{phrase}"</p>
         </div>
       </div>
       <div className="province-data-container">
         <p className="province-p">{desc}</p>
-        <p className="province-data">Climate: {climate}</p>
-        <p className="province-data">Local cuisine: {food}</p>
-        <p className="province-data">Local music: {localMusic}</p>
-        <p className="province-data">Main attractions: {mainAttractions}</p>
+        <p className="province-data">
+          <strong style={{ fontWeight: "bold" }}>CLIMATE:</strong>
+          <span
+            style={{
+              fontWeight: "light",
+              fontFamily: "Arial, Helvetica, sans-serif",
+            }}
+          >
+            {" "}
+            {climate}
+          </span>
+        </p>
+        <p className="province-data">
+          <strong style={{ fontWeight: "bold" }}>LOCAL CUISINE:</strong>
+          <span
+            style={{
+              fontWeight: "light",
+              fontFamily: "Arial, Helvetica, sans-serif",
+            }}
+          >
+            {" "}
+            {food}
+          </span>
+        </p>
+        <p className="province-data">
+          <strong style={{ fontWeight: "bold" }}>LOCAL MUSIC:</strong>
+          <span
+            style={{
+              fontWeight: "light",
+              fontFamily: "Arial, Helvetica, sans-serif",
+            }}
+          >
+            {" "}
+            {localMusic}
+          </span>
+        </p>
+        <p className="province-data">
+          <strong style={{ fontWeight: "bold" }}>MAIN ATRACCTIONS:</strong>
+          <span
+            style={{
+              fontWeight: "light",
+              fontFamily: "Arial, Helvetica, sans-serif",
+            }}
+          >
+            {" "}
+            {mainAttractions}
+          </span>
+        </p>
       </div>
     </section>
   );

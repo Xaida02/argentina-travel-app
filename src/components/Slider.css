@@ -76,7 +76,7 @@
   border: 2px solid var(--light-blue-a); /* add a border */
   text-align: center;
   width: 30%;
-  border-radius: 5px;
+  border-radius: 2.5px;
   /* height: 50%; */
   color: var(--light-blue-a); /* text color */
   display: inline-block;

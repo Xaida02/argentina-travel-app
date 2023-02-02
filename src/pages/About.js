@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { MdReviews } from "react-icons/md";
 import Loading from "../components/Loading";
+// import customerImage from "../customers/1.jpg";
 import "./About.css";
+import customers from "../customer";
 
 const About = () => {
   const [localLoading, setLocalLoading] = useState(true);
@@ -52,66 +54,47 @@ const About = () => {
         <span>
           reviews <MdReviews className="review-icon" />
         </span>
-        :
       </h2>
       <div className="reviews">
-        <p className="review">
-          "I recently took a tour of Buenos Aires with VisitAR and it was an
-          unforgettable experience! The guides were incredibly knowledgeable and
-          made the city come to life.
-          <br /> I loved learning about the history and culture of Buenos Aires,
-          and the tour included stops at some of the most iconic landmarks in
-          the city. I would highly recommend VisitAR to anyone looking for a
-          unique and immersive tour experience."
-        </p>
-        <p className="review">
-          "I went on a tour of Formosa with VisitAR and it was truly amazing! I
-          never expected to see such beautiful landscapes and wildlife in
-          Argentina.
-          <br /> The guides were very friendly and took great care of us
-          throughout the tour. I felt like I was born here in the desert. I
-          would definitely recommend VisitAR to anyone looking for an adventure
-          in Argentina"
-        </p>
-        <p className="review">
-          "I recently took a tour of Cordoba with VisitAR and it was an amazing
-          experience! The guides were very passionate about the history of the
-          city. I loved learning about the architecture and the culture of
-          Cordoba, and the tour included stops at some of the most iconic
-          landmarks in the city.
-          <br /> I would highly recommend VisitAR to anyone looking for a unique
-          and immersive tour experience."
-        </p>
-        <p className="review">
-          "I was very nervous about traveling to Argentina due to the recent
-          reports of insecurity, but the team at VisitAR made me feel reassured
-          and safe throughout my entire tour. They provided clear and detailed
-          safety instructions, and I felt secure in their hands.
-          <br /> After experiencing the country and its culture firsthand, I
-          realized that the media often exaggerates the situation, and I had an
-          amazing, worry-free trip."
-        </p>
-        <p className="review">
-          "I went on a tour of Misiones with VisitAR and it was a wonderful
-          experience. The guides were very friendly and confident moving us
-          throughout the area. I loved learning about the history and culture of
-          Misiones, and the tour included stops at some of the most beautiful
-          places in the province.
-          <br /> I would definitely recommend VisitAR to anyone looking for an
-          unforgettable tour experience in Argentina."
-        </p>
-        <p className="review">
-          "I recently took a tour of Ushuaia with VisitAR and it was a fantastic
-          experience! The guides were very knowledgeable and passionate about
-          the area.
-          <br /> I loved learning about the history and culture of Ushuaia and
-          the tour included stops at some of the most iconic landmarks in the
-          city. I would highly recommend VisitAR to anyone looking for a unique
-          and immersive tour experience."
-        </p>
+        {customers.map((customer) => {
+          const { img, stars, name, review } = customer;
+
+          return (
+            <div className="review">
+              <div className="user-review">
+                <div className="happy-customer">
+                  <img className="customer-pic" src={img} alt={name + " pic"} />
+                  <span>{name}</span>
+                </div>
+                <span className="stars">{stars}</span>
+              </div>
+              <p>{review}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
 };
 
 export default About;
+
+// <div className="review">
+//   <div className="user-review">
+//     <div className="happy-customer"></div>
+//     {/* <FaStar className="star" />
+//           <FaStar className="star" />
+//           <FaStar className="star" />
+//           <FaStar className="star" />
+//           <FaStarHalf className="star half" /> */}
+//   </div>
+//   <p>
+//     "I recently took a tour of Buenos Aires with VisitAR and it was an
+//     unforgettable experience! The guides were incredibly knowledgeable and
+//     made the city come to life.
+//     <br /> I loved learning about the history and culture of Buenos Aires, and
+//     the tour included stops at some of the most iconic landmarks in the city.
+//     I would highly recommend VisitAR to anyone looking for a unique and
+//     immersive tour experience."
+//   </p>
+// </div>;

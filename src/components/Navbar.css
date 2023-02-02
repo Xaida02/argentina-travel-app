@@ -131,6 +131,10 @@ nav {
   border-radius: 3px;
 }
 
+.toggle-btn:hover {
+  background-color: #00000016;
+}
+
 .toggle {
   font-size: 4vh;
   padding: 5px;
@@ -161,6 +165,9 @@ img {
 
   .logo {
     padding-bottom: 5px;
+  }
+  .logo svg {
+    font-size: 1.5em;
   }
 
   .links {

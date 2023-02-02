@@ -60,11 +60,13 @@ const Contact = () => {
         <p className="text-contact">
           As a highly motivated and eager junior front end developer, I am
           currently honing my skills and building my portfolio to showcase my
-          abilities and expertise. If you're looking for a dedicated and
-          passionate developer to join your team, I would love the opportunity
-          to connect with you and discuss how my skills can benefit your
-          organization. Feel free to reach out to me on the following platforms.
-          I am always available and ready to take on new challenges.
+          abilities and expertise.
+          <br /> If you're looking for a dedicated and passionate developer to
+          join your team, I would love the opportunity to connect with you and
+          discuss how my skills can benefit your organization.
+          <br /> Feel free to reach out to me on the following platforms or in
+          the form below via your email. I am always available and ready to take
+          on new challenges.
         </p>
       </div>
       <div className="conctact-email-container">
@@ -92,6 +94,7 @@ const Contact = () => {
         ))}
       </div>
       <div
+        onClick={() => setShowSent({ color: null, sent: false })}
         className={
           "email-sent" +
           `${showSent.sent ? " show-sent " + showSent.color : ""}`

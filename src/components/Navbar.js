@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { FaAlignJustify, FaMountain } from "react-icons/fa";
+import { FaBars, FaMountain } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import data from "../data";
 
@@ -33,7 +33,7 @@ const Navbar = () => {
             }}
             className="toggle-btn"
           >
-            <FaAlignJustify className="toggle" />
+            <FaBars className="toggle" />
           </button>
         </div>
         <div

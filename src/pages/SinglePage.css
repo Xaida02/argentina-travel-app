@@ -22,7 +22,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  box-shadow: 0px 0px 10px var(--light-blue-0);
 }
 
 .img-left > * {
@@ -51,9 +50,10 @@
 }
 
 .single-phrase {
-  font-size: 1.5rem;
-  padding: 10px;
+  font-size: 0.95rem;
+  padding: 5px;
   text-align: center;
+  text-transform: capitalize;
   color: var(--light-blue-a);
   font-style: italic;
 }
@@ -69,9 +69,13 @@
   font-size: 0.9em;
   font-family: "Montserrat", sans-serif;
   padding: 5px 4vh;
-  font-weight: 100;
-  color: var(--light-blue-dark);
+  color: var(--light-blue-text);
   text-decoration: dotted;
+  font-weight: lighter;
+}
+
+.province-data span {
+  color: rgba(0, 0, 0, 0.564);
 }
 
 .province-p {
@@ -86,7 +90,6 @@
   letter-spacing: 3.5px;
   padding: 1.8vh;
   font-size: 1rem;
-  background-color: var(--light-blue-0);
   transition: all 0.5s;
   border-radius: 5px;
   font-weight: bold;
@@ -94,19 +97,20 @@
   position: relative;
   cursor: pointer;
   color: whitesmoke;
+  background-color: var(--light-blue-3);
   transition: var(--transition);
 }
 
 .reserve:hover {
   color: white;
+  background-color: var(--light-blue-0);
 
-  background-color: var(--light-blue-3);
   transform: scale(1.12);
 }
 
 .province-data::before {
   content: "• ";
-  color: var(--light-blue-0);
+  color: var(--light-blue-1);
 }
 
 @media screen and (max-width: 450px) and (max-height: 900px) {

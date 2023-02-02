@@ -20,6 +20,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-weight: bold;
   /* flex-direction: row; */
 }
 
@@ -29,14 +30,15 @@ section {
   text-transform: uppercase;
   font-weight: bold;
   height: auto;
+  font-weight: bold;
   letter-spacing: 10px;
 }
 
 .title > h2 {
   font-size: 1.5rem;
-  color: whitesmoke;
+  color: var(--light-blue-a);
   margin-right: 20px;
-  font-weight: 600;
+  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -129,7 +131,7 @@ section {
   height: 100%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) and (max-height: 900px) {
   .title {
     flex-direction: column;
     transform: scale(0.8);
@@ -141,6 +143,8 @@ section {
     width: 100%;
     text-align: center;
     transform: scale(0.8);
+    font-weight: bold;
+    color: var(--light-blue-3);
   }
   .social-sites {
     width: 70%;
